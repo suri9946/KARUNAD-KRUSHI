@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+  <defs>
+    <linearGradient id="leafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#22c55e" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#e0e0e0" />
+    </linearGradient>
+  </defs>
+
+  <!-- Sprout / Organic Network Icon -->
+  <g transform="translate(10, 5)">
+    <!-- Main stem -->
+    <path d="M 25,48 C 25,30 35,22 45,18" fill="none" stroke="url(#leafGrad)" stroke-width="3" stroke-linecap="round" />
+    
+    <!-- Left Leaf -->
+    <path d="M 25,35 C 10,32 8,20 22,22 C 26,22 25,30 25,35 Z" fill="url(#leafGrad)" />
+    
+    <!-- Right Leaf -->
+    <path d="M 33,26 C 45,18 42,6 30,12 C 28,14 31,22 33,26 Z" fill="url(#leafGrad)" />
+    
+    <!-- Micro-spores circles representing BioBlend -->
+    <circle cx="16" cy="18" r="2.5" fill="#06b6d4" opacity="0.8" />
+    <circle cx="48" cy="14" r="2" fill="#22c55e" opacity="0.8" />
+    <circle cx="36" cy="38" r="1.5" fill="#22c55e" opacity="0.6" />
+  </g>
+
+  <!-- Brand Typography -->
+  <g transform="translate(70, 0)">
+    <!-- Brand Name -->
+    <text x="0" y="32" font-family="'Outfit', 'Inter', sans-serif" font-size="20" font-weight="800" fill="url(#textGrad)" letter-spacing="1">
+      KARUNAD KRUSHI
+    </text>
+    <!-- Tagline -->
+    <text x="0" y="47" font-family="'Inter', sans-serif" font-size="9" font-weight="600" fill="#a0a0a0" letter-spacing="1.5">
+      BIOLOGICAL SOIL SOLUTIONS
+    </text>
+  </g>
+</svg>

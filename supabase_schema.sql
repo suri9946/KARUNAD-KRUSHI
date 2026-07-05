@@ -1,6 +1,17 @@
 -- Enable UUID extension
 create extension if not exists "uuid-ossp";
 
+-- Drop existing tables to perform a clean reset
+drop table if exists product_variants cascade;
+drop table if exists products cascade;
+drop table if exists blogs cascade;
+drop table if exists scientific_articles cascade;
+drop table if exists inquiries cascade;
+drop table if exists gallery cascade;
+drop table if exists orders cascade;
+drop table if exists site_content cascade;
+drop table if exists seo_settings cascade;
+
 -- ========================================================
 -- 1. Create Tables
 -- ========================================================

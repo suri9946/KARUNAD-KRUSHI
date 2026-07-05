@@ -389,7 +389,7 @@ values
   ]}');
 
 -- ========================================================
--- 3. Create Storage Bucket & Policies
+-- 3. Create Storage Bucket
 -- ========================================================
 
 -- Create the site-assets bucket if it does not exist
@@ -397,26 +397,4 @@ insert into storage.buckets (id, name, public)
 values ('site-assets', 'site-assets', true)
 on conflict (id) do nothing;
 
--- Enable Row Level Security (RLS) on storage.objects
-alter table storage.objects enable row level security;
-
--- Drop existing policies if they exist to avoid conflict errors
-drop policy if exists "Public Read Access" on storage.objects;
-drop policy if exists "Public Upload Access" on storage.objects;
-drop policy if exists "Public Delete Access" on storage.objects;
-
--- Allow public read access to objects in site-assets bucket
-create policy "Public Read Access"
-on storage.objects for select
-using ( bucket_id = 'site-assets' );
-
--- Allow public insert/upload access to objects in site-assets bucket
-create policy "Public Upload Access"
-on storage.objects for insert
-with check ( bucket_id = 'site-assets' );
-
--- Allow public delete access to objects in site-assets bucket
-create policy "Public Delete Access"
-on storage.objects for delete
-using ( bucket_id = 'site-assets' );
 
